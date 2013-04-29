@@ -25,11 +25,11 @@ public class Controller {
 		list.add(products.get(1));
 		list.add(products.get(8));
 
-		System.out.println(link.getUserLink().signup("Sebastian", "Castell",
-				"noise@hotmail.com", "hemligt", "1980-10-02", "Sweden",
-				"Tyreso", "13536", "Koriandergrand 47", "Sthlm"));
+		System.out.println(link.getUserLink().signup("firstname", "lastname",
+				"an.email@hmail.net", "secretly", "1980-01-01", "Sweden",
+				"Tyreso", "13501", "Street 89", "Sthlm"));
 		Customer user = link.getUserLink()
-				.login("noise@hotmail.com", "hemligt");
+				.login("an.email@hmail.net", "secretly");
 		System.out.println(user.getEmail());
 
 		System.out.println(link.getOrderLink().saveOrder(user.getUserId(),
@@ -37,7 +37,7 @@ public class Controller {
 		System.out.println(link.getUserLink().updateUserPassword("rispig",
 				user.getPassword(), user.getUserId()));
 		System.out.println(link.getUserLink()
-				.login("noise@hotmail.com", "rispig").getPassword());
+				.login("an.mail@hmail.net", "rispig").getPassword());
 
 	}
 }
